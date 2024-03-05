@@ -10,12 +10,10 @@ class BroadcastController : RPBroadcastController {
 @objc(CordovaReplay) class CordovaReplay : CDVPlugin, RPScreenRecorderDelegate, RPPreviewViewControllerDelegate, RPBroadcastActivityViewControllerDelegate {
     
     weak var previewViewController: RPPreviewViewController?
-    var CDVWebview:UIWebView;
 
     // This is just called if <param name="onload" value="true" /> in plugin.xml.
-    init(webView: UIWebView) {
-        self.CDVWebview = webView
-        //super.init(webView: webView)
+    override init() {
+        super.init()
     }
     
     @objc(isAvailable:)
