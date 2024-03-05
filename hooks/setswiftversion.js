@@ -12,7 +12,7 @@ module.exports = function (context) {
             return;
     }
 
-    var xcode = context.requireCordovaModule('xcode');
+    var xcode = require('xcode');
     var iosFolder = context.opts.cordova.project ? context.opts.cordova.project.root : path.join(context.opts.projectRoot, 'platforms', 'ios');
     var dir;
     var projectPath;
