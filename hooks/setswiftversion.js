@@ -44,7 +44,7 @@ module.exports = function (context) {
     }
 
     // set swift to 3.0
-    pbxProject.addBuildProperty('SWIFT_VERSION', '3.0');
+    pbxProject.addBuildProperty('SWIFT_VERSION', '4.0');
 
     // write the updated project file
     fs.writeFileSync(projectPath, pbxProject.writeSync());
